@@ -3,23 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    <style>
+
+    </style>
 </head>
 <body>
-<form>
-    <fieldset id="group1">
-         <label for="group1_option1">Option 1</label>
-    <br>
-         <label for="group1_option1">Option 1</label>
-        <input type="radio" value="sdas">
-         <label for="group1_option1">Option 1</label>
-        <input type="radio" value="sdasd">
-    </fieldset>
+<div class="container h-100" style="max-width: 1080px">
+  <div class="row h-100 justify-content-center align-items-center">
+    <form class="col-12">
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Até que série seu pai, ou o homem responsável por você, estudou?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P1" id="P1_1" value="1">
+                  <label class="form-check-label" for="P1_1">
+                    Nunca estudou.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P1" id="P1_2" value="2">
+                  <label class="form-check-label" for="P1_2">
+                    Não completou a 4ª série/5º ano do Ensino Fundamental.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P1" id="P1_3" value="3">
+                  <label class="form-check-label" for="P1_3">
+                    Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P1" id="P1_4" value="4">
+                  <label class="form-check-label" for="P1_4">
+                      Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P1" id="P1_5" value="5">
+                  <label class="form-check-label" for="P1_5">
+                      Completou o Ensino Médio, mas não completou a Faculdade.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P1" id="P1_6" value="6">
+                  <label class="form-check-label" for="P1_6">
+                      Completou a Faculdade, mas não completou a Pós-graduação.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P1" id="P1_7" value="7">
+                  <label class="form-check-label" for="P1_7">
+                      Completou a Pós-graduação.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P1" id="P1_8" value="8">
+                  <label class="form-check-label" for="P1_8">
+                      Não sei.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Até que série sua mãe, ou a mulher responsável por você, estudou?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P2" id="P2_1" value="1">
+                  <label class="form-check-label" for="P2_1">
+                    Nunca estudou.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P2" id="P2_2" value="2">
+                  <label class="form-check-label" for="P2_2">
+                    Não completou a 4ª série/5º ano do Ensino Fundamental.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P2" id="P2_3" value="3">
+                  <label class="form-check-label" for="P2_3">
+                    Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P2" id="P2_4" value="4">
+                  <label class="form-check-label" for="P2_4">
+                      Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P2" id="P2_5" value="5">
+                  <label class="form-check-label" for="P2_5">
+                      Completou o Ensino Médio, mas não completou a Faculdade.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P2" id="P2_6" value="6">
+                  <label class="form-check-label" for="P2_6">
+                      Completou a Faculdade, mas não completou a Pós-graduação.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P2" id="P2_7" value="7">
+                  <label class="form-check-label" for="P2_7">
+                      Completou a Pós-graduação.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P2" id="P2_8" value="8">
+                  <label class="form-check-label" for="P2_8">
+                      Não sei.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação do seu pai ou do homem responsável por você. (Se ele não estiver trabalhando, escolha uma ocupação pensando no último trabalho dele).</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P3" id="P3_1" value="1">
+                  <label class="form-check-label" for="P3_1">
+                    Grupo 1: Lavrador, agricultor sem empregados, bóia fria, criador de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultor, pescador, lenhador, seringueiro, extrativista.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P3" id="P3_2" value="2">
+                  <label class="form-check-label" for="P3_2">
+                    Grupo 2: Diarista, empregado doméstico, cuidador de idosos, babá, cozinheiro (em casas particulares), motorista particular, jardineiro, faxineiro de empresas e prédios, vigilante, porteiro, carteiro, office-boy, vendedor, caixa, atendente de loja, auxiliar administrativo, recepcionista, servente de pedreiro, repositor de mercadoria.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P3" id="P3_3" value="3">
+                  <label class="form-check-label" for="P3_3">
+                    Grupo 3: Padeiro, cozinheiro industrial ou em restaurantes, sapateiro, costureiro, joalheiro, torneiro mecânico, operador de máquinas, soldador, operário de fábrica, trabalhador da mineração, pedreiro, pintor, eletricista, encanador, motorista, caminhoneiro, taxista.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P3" id="P3_4" value="4">
+                  <label class="form-check-label" for="P3_4">
+                      Grupo 4: Professor (de ensino fundamental ou médio, idioma, música, artes etc.), técnico (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretor de imóveis, supervisor, gerente, mestre de obras, pastor, microempresário (proprietário de empresa com menos de 10 empregados), pequeno comerciante, pequeno proprietário de terras, trabalhador autônomo ou por conta própria.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P3" id="P3_5" value="5">
+                  <label class="form-check-label" for="P3_5">
+                      Grupo 5: Médico, engenheiro, dentista, psicólogo, economista, advogado, juiz, promotor, defensor, delegado, tenente, capitão, coronel, professor universitário, diretor em empresas públicas ou privadas, político, proprietário de empresas com mais de 10 empregados.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P3" id="P3_6" value="6">
+                  <label class="form-check-label" for="P3_6">
+                      Não sei.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Incluindo você, quantas pessoas moram atualmente em sua residência?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P4" id="P4_1" value="1">
+                  <label class="form-check-label" for="P4_1">
+                    1, pois moro sozinho(a).
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P4" id="P4_2" value="2">
+                  <label class="form-check-label" for="P4_2">
+                    2
 
-    <fieldset id="group2">
-        <input type="radio" value="asdas">
-        <input type="radio" value="sad">
-        <input type="radio" value="asda">
-    </fieldset>
-</form>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P4" id="P4_3" value="3">
+                  <label class="form-check-label" for="P4_3">
+                    3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P4" id="P4_4" value="4">
+                  <label class="form-check-label" for="P4_4">
+                      4
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P4" id="P4_5" value="5">
+                  <label class="form-check-label" for="P4_5">
+                      5
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P4" id="P4_6" value="6">
+                  <label class="form-check-label" for="P4_6">
+                      6
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P3" id="P3_1" value="1">
+                  <label class="form-check-label" for="P3_1">
+                    Grupo 1: Lavradora, agricultora sem empregados, bóia fria, criadora de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultora, pescadora, lenhadora, seringueira, extrativista.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P3" id="P3_2" value="2">
+                  <label class="form-check-label" for="P3_2">
+                    Grupo 2: Diarista, empregada doméstica, cuidadora de idosos, babá, cozinheira (em casas particulares), motorista particular, jardineira, faxineira de empresas e prédios, vigilante, porteira, carteira, office-boy, vendedora, caixa, atendente de loja, auxiliar administrativa, recepcionista, servente de pedreiro, repositora de mercadoria.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P3" id="P3_3" value="3">
+                  <label class="form-check-label" for="P3_3">
+                    Grupo 3: Padeira, cozinheira industrial ou em restaurantes, sapateira, costureira, joalheira, torneira mecânica, operadora de máquinas, soldadora, operária de fábrica, trabalhadora da mineração, pedreira, pintora, eletricista, encanadora, motorista, caminhoneira, taxista.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P3" id="P3_4" value="4">
+                  <label class="form-check-label" for="P3_4">
+                      Grupo 4: Professora (de ensino fundamental ou médio, idioma, música, artes etc.), técnica (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretora de imóveis, supervisora, gerente, mestre de obras, pastora, microempresária (proprietária de empresa com menos de 10 empregados), pequena comerciante, pequena proprietária de terras, trabalhadora autônoma ou por conta própria.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P3" id="P3_5" value="5">
+                  <label class="form-check-label" for="P3_5">
+                      Grupo 5: Médica, engenheira, dentista, psicóloga, economista, advogada, juíza, promotora, defensora, delegada, tenente, capitã, coronel, professora universitária, diretora em empresas públicas ou privadas, política, proprietária de empresas com mais de 10 empregados.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="P3" id="P3_6" value="6">
+                  <label class="form-check-label" for="P3_6">
+                      Não sei.
+                  </label>
+                </div>
+            </div>
+        </div>
+    </form>
+  </div>
+</div>
 </body>
 </html>
