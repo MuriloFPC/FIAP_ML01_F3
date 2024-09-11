@@ -4,64 +4,71 @@
     <meta charset="UTF-8">
     <title>Title</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    <style>
-
-    </style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/htmx.org@1.8.0"></script>
 </head>
 <body>
 <div class="container h-100" style="max-width: 1080px">
   <div class="row h-100 justify-content-center align-items-center">
-    <form class="col-12">
+      <p class="fs-1 text-center">Trabalho FIAP - 1MLET</p>
+      <p class="fs-2 text-center">Membros do grupo</p>
+    <p class="fs-4 text-center">Murilo Fischer de Paula Conceição Linkedin XD</p>
+    <p class="fs-4 text-center">sas</p>
+    <p class="fs-4 text-center">asas</p>
+
+    <form hx-post="/predict" hx-target="#response" hx-swap="innerHTML show:top" class="col-12">
+
+
         <div class="row">
             <div class="col-md-6 border" style="text-align: center; align-content: center">
-                        <b>Até que série seu pai, ou o homem responsável por você, estudou?</b>
+                        <b>P1: Até que série seu pai, ou o homem responsável por você, estudou?</b>
             </div>
             <div class="col-md-6 border">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P1" id="P1_1" value="1">
-                  <label class="form-check-label" for="P1_1">
+                  <input class="form-check-input" type="radio" name="Q001" id="Q001_1" value="1">
+                  <label class="form-check-label" for="Q001_1">
                     Nunca estudou.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P1" id="P1_2" value="2">
-                  <label class="form-check-label" for="P1_2">
+                  <input class="form-check-input" type="radio" name="Q001" id="Q001_2" value="2">
+                  <label class="form-check-label" for="Q001_2">
                     Não completou a 4ª série/5º ano do Ensino Fundamental.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P1" id="P1_3" value="3">
-                  <label class="form-check-label" for="P1_3">
+                  <input class="form-check-input" type="radio" name="Q001" id="Q001_3" value="3">
+                  <label class="form-check-label" for="Q001_3">
                     Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P1" id="P1_4" value="4">
-                  <label class="form-check-label" for="P1_4">
+                  <input class="form-check-input" type="radio" name="Q001" id="Q001_4" value="4">
+                  <label class="form-check-label" for="Q001_4">
                       Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P1" id="P1_5" value="5">
-                  <label class="form-check-label" for="P1_5">
+                  <input class="form-check-input" type="radio" name="Q001" id="Q001_5" value="5">
+                  <label class="form-check-label" for="Q001_5">
                       Completou o Ensino Médio, mas não completou a Faculdade.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P1" id="P1_6" value="6">
-                  <label class="form-check-label" for="P1_6">
+                  <input class="form-check-input" type="radio" name="Q001" id="Q001_6" value="6">
+                  <label class="form-check-label" for="Q001_6">
                       Completou a Faculdade, mas não completou a Pós-graduação.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P1" id="P1_7" value="7">
-                  <label class="form-check-label" for="P1_7">
+                  <input class="form-check-input" type="radio" name="Q001" id="Q001_7" value="7">
+                  <label class="form-check-label" for="Q001_7">
                       Completou a Pós-graduação.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P1" id="P1_8" value="8">
-                  <label class="form-check-label" for="P1_8">
+                  <input class="form-check-input" type="radio" name="Q001" id="Q001_8" value="8">
+                  <label class="form-check-label" for="Q001_8">
                       Não sei.
                   </label>
                 </div>
@@ -73,50 +80,50 @@
             </div>
             <div class="col-md-6 border">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P2" id="P2_1" value="1">
-                  <label class="form-check-label" for="P2_1">
+                  <input class="form-check-input" type="radio" name="Q002" id="Q002_1" value="1">
+                  <label class="form-check-label" for="Q002_1">
                     Nunca estudou.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P2" id="P2_2" value="2">
-                  <label class="form-check-label" for="P2_2">
+                  <input class="form-check-input" type="radio" name="Q002" id="Q002_2" value="2">
+                  <label class="form-check-label" for="Q002_2">
                     Não completou a 4ª série/5º ano do Ensino Fundamental.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P2" id="P2_3" value="3">
-                  <label class="form-check-label" for="P2_3">
+                  <input class="form-check-input" type="radio" name="Q002" id="Q002_3" value="3">
+                  <label class="form-check-label" for="Q002_3">
                     Completou a 4ª série/5º ano, mas não completou a 8ª série/9º ano do Ensino Fundamental.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P2" id="P2_4" value="4">
-                  <label class="form-check-label" for="P2_4">
+                  <input class="form-check-input" type="radio" name="Q002" id="Q002_4" value="4">
+                  <label class="form-check-label" for="Q002_4">
                       Completou a 8ª série/9º ano do Ensino Fundamental, mas não completou o Ensino Médio.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P2" id="P2_5" value="5">
-                  <label class="form-check-label" for="P2_5">
+                  <input class="form-check-input" type="radio" name="Q002" id="Q002_5" value="5">
+                  <label class="form-check-label" for="Q002_5">
                       Completou o Ensino Médio, mas não completou a Faculdade.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P2" id="P2_6" value="6">
-                  <label class="form-check-label" for="P2_6">
+                  <input class="form-check-input" type="radio" name="Q002" id="Q002_6" value="6">
+                  <label class="form-check-label" for="Q002_6">
                       Completou a Faculdade, mas não completou a Pós-graduação.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P2" id="P2_7" value="7">
-                  <label class="form-check-label" for="P2_7">
+                  <input class="form-check-input" type="radio" name="Q002" id="Q002_7" value="7">
+                  <label class="form-check-label" for="Q002_7">
                       Completou a Pós-graduação.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P2" id="P2_8" value="8">
-                  <label class="form-check-label" for="P2_8">
+                  <input class="form-check-input" type="radio" name="Q002" id="Q002_8" value="8">
+                  <label class="form-check-label" for="Q002_8">
                       Não sei.
                   </label>
                 </div>
@@ -128,38 +135,81 @@
             </div>
             <div class="col-md-6 border">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P3" id="P3_1" value="1">
-                  <label class="form-check-label" for="P3_1">
+                  <input class="form-check-input" type="radio" name="Q003" id="Q003_1" value="1">
+                  <label class="form-check-label" for="Q003_1">
                     Grupo 1: Lavrador, agricultor sem empregados, bóia fria, criador de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultor, pescador, lenhador, seringueiro, extrativista.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P3" id="P3_2" value="2">
-                  <label class="form-check-label" for="P3_2">
+                  <input class="form-check-input" type="radio" name="Q003" id="Q003_2" value="2">
+                  <label class="form-check-label" for="Q003_2">
                     Grupo 2: Diarista, empregado doméstico, cuidador de idosos, babá, cozinheiro (em casas particulares), motorista particular, jardineiro, faxineiro de empresas e prédios, vigilante, porteiro, carteiro, office-boy, vendedor, caixa, atendente de loja, auxiliar administrativo, recepcionista, servente de pedreiro, repositor de mercadoria.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P3" id="P3_3" value="3">
-                  <label class="form-check-label" for="P3_3">
+                  <input class="form-check-input" type="radio" name="Q003" id="Q003_3" value="3">
+                  <label class="form-check-label" for="Q003_3">
                     Grupo 3: Padeiro, cozinheiro industrial ou em restaurantes, sapateiro, costureiro, joalheiro, torneiro mecânico, operador de máquinas, soldador, operário de fábrica, trabalhador da mineração, pedreiro, pintor, eletricista, encanador, motorista, caminhoneiro, taxista.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P3" id="P3_4" value="4">
-                  <label class="form-check-label" for="P3_4">
+                  <input class="form-check-input" type="radio" name="Q003" id="Q003_4" value="4">
+                  <label class="form-check-label" for="Q003_4">
                       Grupo 4: Professor (de ensino fundamental ou médio, idioma, música, artes etc.), técnico (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretor de imóveis, supervisor, gerente, mestre de obras, pastor, microempresário (proprietário de empresa com menos de 10 empregados), pequeno comerciante, pequeno proprietário de terras, trabalhador autônomo ou por conta própria.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P3" id="P3_5" value="5">
-                  <label class="form-check-label" for="P3_5">
+                  <input class="form-check-input" type="radio" name="Q003" id="Q003_5" value="5">
+                  <label class="form-check-label" for="Q003_5">
                       Grupo 5: Médico, engenheiro, dentista, psicólogo, economista, advogado, juiz, promotor, defensor, delegado, tenente, capitão, coronel, professor universitário, diretor em empresas públicas ou privadas, político, proprietário de empresas com mais de 10 empregados.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P3" id="P3_6" value="6">
-                  <label class="form-check-label" for="P3_6">
+                  <input class="form-check-input" type="radio" name="Q003" id="Q003_6" value="6">
+                  <label class="form-check-label" for="Q003_6">
+                      Não sei.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q004" id="Q004_1" value="1">
+                  <label class="form-check-label" for="Q004_1">
+                    Grupo 1: Lavradora, agricultora sem empregados, bóia fria, criadora de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultora, pescadora, lenhadora, seringueira, extrativista.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q004" id="Q004_2" value="2">
+                  <label class="form-check-label" for="Q004_2">
+                    Grupo 2: Diarista, empregada doméstica, cuidadora de idosos, babá, cozinheira (em casas particulares), motorista particular, jardineira, faxineira de empresas e prédios, vigilante, porteira, carteira, office-boy, vendedora, caixa, atendente de loja, auxiliar administrativa, recepcionista, servente de pedreiro, repositora de mercadoria.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q004" id="Q004_3" value="3">
+                  <label class="form-check-label" for="Q004_3">
+                    Grupo 3: Padeira, cozinheira industrial ou em restaurantes, sapateira, costureira, joalheira, torneira mecânica, operadora de máquinas, soldadora, operária de fábrica, trabalhadora da mineração, pedreira, pintora, eletricista, encanadora, motorista, caminhoneira, taxista.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q004" id="Q004_4" value="4">
+                  <label class="form-check-label" for="Q004_4">
+                      Grupo 4: Professora (de ensino fundamental ou médio, idioma, música, artes etc.), técnica (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretora de imóveis, supervisora, gerente, mestre de obras, pastora, microempresária (proprietária de empresa com menos de 10 empregados), pequena comerciante, pequena proprietária de terras, trabalhadora autônoma ou por conta própria.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q004" id="Q004_5" value="5">
+                  <label class="form-check-label" for="Q004_5">
+                      Grupo 5: Médica, engenheira, dentista, psicóloga, economista, advogada, juíza, promotora, defensora, delegada, tenente, capitã, coronel, professora universitária, diretora em empresas públicas ou privadas, política, proprietária de empresas com mais de 10 empregados.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q004" id="Q004_6" value="6">
+                  <label class="form-check-label" for="Q004_6">
                       Não sei.
                   </label>
                 </div>
@@ -171,88 +221,873 @@
             </div>
             <div class="col-md-6 border">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P4" id="P4_1" value="1">
-                  <label class="form-check-label" for="P4_1">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_1" value="1">
+                  <label class="form-check-label" for="Q005_1">
                     1, pois moro sozinho(a).
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P4" id="P4_2" value="2">
-                  <label class="form-check-label" for="P4_2">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_2" value="2">
+                  <label class="form-check-label" for="Q005_2">
                     2
 
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P4" id="P4_3" value="3">
-                  <label class="form-check-label" for="P4_3">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_3" value="3">
+                  <label class="form-check-label" for="Q005_3">
                     3
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P4" id="P4_4" value="4">
-                  <label class="form-check-label" for="P4_4">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_4" value="4">
+                  <label class="form-check-label" for="Q005_4">
                       4
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P4" id="P4_5" value="5">
-                  <label class="form-check-label" for="P4_5">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_5" value="5">
+                  <label class="form-check-label" for="Q005_5">
                       5
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P4" id="P4_6" value="6">
-                  <label class="form-check-label" for="P4_6">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_6" value="6">
+                  <label class="form-check-label" for="Q005_6">
                       6
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_7" value="7">
+                  <label class="form-check-label" for="Q005_7">
+                      7
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_8" value="8">
+                  <label class="form-check-label" for="Q005_8">
+                      8
+                  </label>
+                </div>
+                  
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_9" value="9">
+                  <label class="form-check-label" for="Q005_9">
+                      9
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_10" value="10">
+                  <label class="form-check-label" for="Q005_10">
+                     10
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_11" value="11">
+                  <label class="form-check-label" for="Q005_11">
+                      11
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_12" value="12">
+                  <label class="form-check-label" for="Q005_12">
+                      12
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_13" value="13">
+                  <label class="form-check-label" for="Q005_13">
+                      13
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_14" value="14">
+                  <label class="form-check-label" for="Q005_14">
+                      14
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_15" value="15">
+                  <label class="form-check-label" for="Q005_15">
+                      15
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_16" value="16">
+                  <label class="form-check-label" for="Q005_16">
+                      16
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_6" value="17">
+                  <label class="form-check-label" for="Q005_17">
+                      17
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_18" value="18">
+                  <label class="form-check-label" for="Q005_18">
+                      18
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_19" value="19">
+                  <label class="form-check-label" for="Q005_19">
+                      19
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q005" id="Q005_20" value="20">
+                  <label class="form-check-label" for="Q005_20">
+                      20
                   </label>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 border" style="text-align: center; align-content: center">
-                        <b>A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).</b>
+                        <b>Qual é a renda mensal de sua família? (Some a sua renda com a dos seus familiares.)</b>
             </div>
             <div class="col-md-6 border">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P3" id="P3_1" value="1">
-                  <label class="form-check-label" for="P3_1">
-                    Grupo 1: Lavradora, agricultora sem empregados, bóia fria, criadora de animais (gado, porcos, galinhas, ovelhas, cavalos etc.), apicultora, pescadora, lenhadora, seringueira, extrativista.
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_1" value="1">
+                  <label class="form-check-label" for="Q006_1">
+                    Nenhuma Renda
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P3" id="P3_2" value="2">
-                  <label class="form-check-label" for="P3_2">
-                    Grupo 2: Diarista, empregada doméstica, cuidadora de idosos, babá, cozinheira (em casas particulares), motorista particular, jardineira, faxineira de empresas e prédios, vigilante, porteira, carteira, office-boy, vendedora, caixa, atendente de loja, auxiliar administrativa, recepcionista, servente de pedreiro, repositora de mercadoria.
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_2" value="2">
+                  <label class="form-check-label" for="Q006_2">
+                    Até R$ 1.320,00
+
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P3" id="P3_3" value="3">
-                  <label class="form-check-label" for="P3_3">
-                    Grupo 3: Padeira, cozinheira industrial ou em restaurantes, sapateira, costureira, joalheira, torneira mecânica, operadora de máquinas, soldadora, operária de fábrica, trabalhadora da mineração, pedreira, pintora, eletricista, encanadora, motorista, caminhoneira, taxista.
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_3" value="3">
+                  <label class="form-check-label" for="Q006_3">
+                    De R$ 1.320,01 até R$ 1.980,00.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P3" id="P3_4" value="4">
-                  <label class="form-check-label" for="P3_4">
-                      Grupo 4: Professora (de ensino fundamental ou médio, idioma, música, artes etc.), técnica (de enfermagem, contabilidade, eletrônica etc.), policial, militar de baixa patente (soldado, cabo, sargento), corretora de imóveis, supervisora, gerente, mestre de obras, pastora, microempresária (proprietária de empresa com menos de 10 empregados), pequena comerciante, pequena proprietária de terras, trabalhadora autônoma ou por conta própria.
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_4" value="4">
+                  <label class="form-check-label" for="Q006_4">
+                      De R$ 1.980,01 até R$ 2.640,00.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P3" id="P3_5" value="5">
-                  <label class="form-check-label" for="P3_5">
-                      Grupo 5: Médica, engenheira, dentista, psicóloga, economista, advogada, juíza, promotora, defensora, delegada, tenente, capitã, coronel, professora universitária, diretora em empresas públicas ou privadas, política, proprietária de empresas com mais de 10 empregados.
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_5" value="5">
+                  <label class="form-check-label" for="Q006_5">
+                      De R$ 2.640,01 até R$ 3.300,00.
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="P3" id="P3_6" value="6">
-                  <label class="form-check-label" for="P3_6">
-                      Não sei.
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_6" value="6">
+                  <label class="form-check-label" for="Q006_6">
+                      De R$ 3.300,01 até R$ 3.960,00.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_7" value="7">
+                  <label class="form-check-label" for="Q006_7">
+                      De R$ 3.960,01 até R$ 5.280,00.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_8" value="8">
+                  <label class="form-check-label" for="Q006_8">
+                      De R$ 5.280,01 até R$ 6.600,00.
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_9" value="9">
+                  <label class="form-check-label" for="Q006_9">
+                      De R$ 6.600,01 até R$ 7.920,00.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_10" value="10">
+                  <label class="form-check-label" for="Q006_10">
+                     De R$ 7.920,01 até R$ 9240,00.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_11" value="11">
+                  <label class="form-check-label" for="Q006_11">
+                      De R$ 9.240,01 até R$ 10.560,00.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_12" value="12">
+                  <label class="form-check-label" for="Q006_12">
+                      De R$ 10.560,01 até R$ 11.880,00.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_13" value="13">
+                  <label class="form-check-label" for="Q006_13">
+                      De R$ 11.880,01 até R$ 13.200,00.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_14" value="14">
+                  <label class="form-check-label" for="Q006_14">
+                      De R$ 13.200,01 até R$ 15.840,00.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_15" value="15">
+                  <label class="form-check-label" for="Q006_15">
+                      De R$ 15.840,01 até R$19.800,00.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_16" value="16">
+                  <label class="form-check-label" for="Q006_16">
+                      De R$ 19.800,01 até R$ 26.400,00.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_6" value="17">
+                  <label class="form-check-label" for="Q006_17">
+                      Acima de R$ 26.400,00.
                   </label>
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Em sua residência trabalha empregado(a) doméstico(a)?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q007" id="Q007_1" value="1">
+                  <label class="form-check-label" for="Q007_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q007" id="Q007_2" value="2">
+                  <label class="form-check-label" for="Q007_2">
+                    Sim, um ou dois dias por semana.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q007" id="Q007_3" value="3">
+                  <label class="form-check-label" for="Q007_3">
+                    Sim, três ou quatro dias por semana.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q007" id="Q007_4" value="4">
+                  <label class="form-check-label" for="Q007_4">
+                     Sim, pelo menos cinco dias por semana.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem banheiro?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q008" id="Q008_1" value="1">
+                  <label class="form-check-label" for="Q008_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q008" id="Q008_2" value="2">
+                  <label class="form-check-label" for="Q008_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q008" id="Q008_3" value="3">
+                  <label class="form-check-label" for="Q008_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q008" id="Q008_4" value="4">
+                  <label class="form-check-label" for="Q008_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q008" id="Q008_5" value="5">
+                  <label class="form-check-label" for="Q008_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem quartos para dormir?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q009" id="Q009_1" value="1">
+                  <label class="form-check-label" for="Q009_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q009" id="Q009_2" value="2">
+                  <label class="form-check-label" for="Q009_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q009" id="Q009_3" value="3">
+                  <label class="form-check-label" for="Q009_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q009" id="Q009_4" value="4">
+                  <label class="form-check-label" for="Q009_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q009" id="Q009_5" value="5">
+                  <label class="form-check-label" for="Q009_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem carro?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q010" id="Q010_1" value="1">
+                  <label class="form-check-label" for="Q010_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q010" id="Q010_2" value="2">
+                  <label class="form-check-label" for="Q010_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q010" id="Q010_3" value="3">
+                  <label class="form-check-label" for="Q010_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q010" id="Q010_4" value="4">
+                  <label class="form-check-label" for="Q010_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q010" id="Q010_5" value="5">
+                  <label class="form-check-label" for="Q010_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem motocicleta?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q011" id="Q011_1" value="1">
+                  <label class="form-check-label" for="Q011_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q011" id="Q011_2" value="2">
+                  <label class="form-check-label" for="Q011_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q011" id="Q011_3" value="3">
+                  <label class="form-check-label" for="Q011_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q011" id="Q011_4" value="4">
+                  <label class="form-check-label" for="Q011_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q011" id="Q011_5" value="5">
+                  <label class="form-check-label" for="Q011_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem geladeira?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q012" id="Q012_1" value="1">
+                  <label class="form-check-label" for="Q012_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q012" id="Q012_2" value="2">
+                  <label class="form-check-label" for="Q012_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q012" id="Q012_3" value="3">
+                  <label class="form-check-label" for="Q012_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q012" id="Q012_4" value="4">
+                  <label class="form-check-label" for="Q012_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q012" id="Q012_5" value="5">
+                  <label class="form-check-label" for="Q012_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem freezer (independente ou segunda porta da geladeira)?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q013" id="Q013_1" value="1">
+                  <label class="form-check-label" for="Q013_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q013" id="Q013_2" value="2">
+                  <label class="form-check-label" for="Q013_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q013" id="Q013_3" value="3">
+                  <label class="form-check-label" for="Q013_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q013" id="Q013_4" value="4">
+                  <label class="form-check-label" for="Q013_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q013" id="Q013_5" value="5">
+                  <label class="form-check-label" for="Q013_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem máquina de lavar roupa? (o tanquinho NÃO deve ser considerado)</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q014" id="Q014_1" value="1">
+                  <label class="form-check-label" for="Q014_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q014" id="Q014_2" value="2">
+                  <label class="form-check-label" for="Q014_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q014" id="Q014_3" value="3">
+                  <label class="form-check-label" for="Q014_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q014" id="Q014_4" value="4">
+                  <label class="form-check-label" for="Q014_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q014" id="Q014_5" value="5">
+                  <label class="form-check-label" for="Q014_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem máquina de secar roupa (independente ou em conjunto com a máquina de lavar roupa)?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q015" id="Q015_1" value="1">
+                  <label class="form-check-label" for="Q015_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q015" id="Q015_2" value="2">
+                  <label class="form-check-label" for="Q015_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q015" id="Q015_3" value="3">
+                  <label class="form-check-label" for="Q015_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q015" id="Q015_4" value="4">
+                  <label class="form-check-label" for="Q015_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q015" id="Q015_5" value="5">
+                  <label class="form-check-label" for="Q015_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem forno micro-ondas?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q016" id="Q016_1" value="1">
+                  <label class="form-check-label" for="Q016_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q016" id="Q016_2" value="2">
+                  <label class="form-check-label" for="Q016_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q016" id="Q016_3" value="3">
+                  <label class="form-check-label" for="Q016_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q016" id="Q016_4" value="4">
+                  <label class="form-check-label" for="Q016_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q016" id="Q016_5" value="5">
+                  <label class="form-check-label" for="Q016_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem máquina de lavar louça?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q017" id="Q017_1" value="1">
+                  <label class="form-check-label" for="Q017_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q017" id="Q017_2" value="2">
+                  <label class="form-check-label" for="Q017_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q017" id="Q017_3" value="3">
+                  <label class="form-check-label" for="Q017_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q017" id="Q017_4" value="4">
+                  <label class="form-check-label" for="Q017_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q017" id="Q017_5" value="5">
+                  <label class="form-check-label" for="Q017_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem aspirador de pó?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q018" id="Q018_1" value="1">
+                  <label class="form-check-label" for="Q018_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q018" id="Q018_2" value="2">
+                  <label class="form-check-label" for="Q018_2">
+                    Sim.
+
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem televisão em cores?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q019" id="Q019_1" value="1">
+                  <label class="form-check-label" for="Q019_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q019" id="Q019_2" value="2">
+                  <label class="form-check-label" for="Q019_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q019" id="Q019_3" value="3">
+                  <label class="form-check-label" for="Q019_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q019" id="Q019_4" value="4">
+                  <label class="form-check-label" for="Q019_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q019" id="Q019_5" value="5">
+                  <label class="form-check-label" for="Q019_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem aparelho de DVD?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q020" id="Q020_1" value="1">
+                  <label class="form-check-label" for="Q020_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q020" id="Q020_2" value="2">
+                  <label class="form-check-label" for="Q020_2">
+                    Sim.
+
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem TV por assinatura?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q021" id="Q021_1" value="1">
+                  <label class="form-check-label" for="Q021_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q021" id="Q021_2" value="2">
+                  <label class="form-check-label" for="Q021_2">
+                    Sim.
+
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem telefone celular?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q022" id="Q022_1" value="1">
+                  <label class="form-check-label" for="Q022_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q022" id="Q022_2" value="2">
+                  <label class="form-check-label" for="Q022_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q022" id="Q022_3" value="3">
+                  <label class="form-check-label" for="Q022_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q022" id="Q022_4" value="4">
+                  <label class="form-check-label" for="Q022_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q022" id="Q022_5" value="5">
+                  <label class="form-check-label" for="Q022_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem telefone fixo?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q023" id="Q023_1" value="1">
+                  <label class="form-check-label" for="Q023_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q023" id="Q023_2" value="2">
+                  <label class="form-check-label" for="Q023_2">
+                    Sim.
+
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem computador?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q024" id="Q024_1" value="1">
+                  <label class="form-check-label" for="Q024_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q024" id="Q024_2" value="2">
+                  <label class="form-check-label" for="Q024_2">
+                    Sim, um.
+
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q024" id="Q024_3" value="3">
+                  <label class="form-check-label" for="Q024_3">
+                    Sim, dois.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q024" id="Q024_4" value="4">
+                  <label class="form-check-label" for="Q024_4">
+                     Sim, três.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q024" id="Q024_5" value="5">
+                  <label class="form-check-label" for="Q024_5">
+                     Sim, quatro ou mais.
+                  </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 border" style="text-align: center; align-content: center">
+                        <b>Na sua residência tem acesso à Internet?</b>
+            </div>
+            <div class="col-md-6 border">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q025" id="Q025_1" value="1">
+                  <label class="form-check-label" for="Q025_1">
+                    Não.
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="Q025" id="Q025_2" value="2">
+                  <label class="form-check-label" for="Q025_2">
+                    Sim.
+
+                  </label>
+                </div>
+            </div>
+        </div>
+
+
+        <input class="btn btn-primary btn-lg" type="submit" value="Ver nota">
     </form>
+        <div id="response"></div>
+
   </div>
 </div>
 </body>
