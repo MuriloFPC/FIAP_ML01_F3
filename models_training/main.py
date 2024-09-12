@@ -63,7 +63,7 @@ if __name__ == '__main__':
     csv.dropna(inplace=True)
     logger.info('Data preprocessed')
 
-    colunas_remover = [x for x in csv.columns[0:51] if x not in ['TP_ESCOLA','TP_FAIXA_ETARIA','TP_ESCOLA','TP_ENSINO']]
+    colunas_remover = [x for x in csv.columns[0:51] if x not in ['TP_ESCOLA','TP_FAIXA_ETARIA','TP_ENSINO']]
 
     X = csv.drop(columns=colunas_remover)
     y_nota_ch = csv['NU_NOTA_CH'] #predict column

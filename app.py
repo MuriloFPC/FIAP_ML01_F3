@@ -1,19 +1,31 @@
+import threading
+
 from flask import Flask, render_template, request, send_file
 import pandas as pd
 import pickle
 
 app = Flask(__name__)
+app.model_carregado = False
 
-app.model_nota_ch = None
-app.model_nota_cn = None
-app.model_nota_lc = None
-app.model_nota_mt = None
-app.model_nota_re = None
+def import_model(model_name):
+    with open(f'./models_pickle/model_XGBoost_{model_name}.pkl', 'rb') as f:
+        model = pickle.load(f)
+    return model
 
+def load_models():
 
+    global model_nota_ch, model_nota_cn, model_nota_lc, model_nota_mt, model_nota_re
+    model_nota_ch = import_model('nota_ch')
+    model_nota_cn = import_model('nota_cn')
+    model_nota_lc = import_model('nota_lc')
+    model_nota_mt = import_model('nota_mt')
+    model_nota_re = import_model('nota_redacao')
+    setattr(app, 'model_carregado', True)
 @app.route('/', methods=['GET'])
 def hello_world():  # put application's code here
     return render_template('index.html')
+
+
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -23,49 +35,37 @@ def predict():
         if errors is not None:
             return errors
 
-        if app.model_nota_ch is None:
-            app.model_nota_ch = import_model('nota_ch')
-            pass
+        if not app.model_carregado:
+            return  f"""
+                    <div class="alert alert-danger">
+                        <p><strong>Modelos sendo carregados, aguarde um momento</strong></p>
+                    </div>
+                    """
+        dict = request.form.to_dict()
+        dict = {k: [int(v)] for k, v in dict.items()}
+        df =  pd.DataFrame.from_dict(dict)
+        cols = list(df.columns)
+        cols = cols[-1:] + cols[-3:-2] + cols[-2:-1] + cols[:25]
+        df = df[cols]
 
-        if app.model_nota_cn is None:
-            #app.model_nota_cn = import_model('nota_cn')
-            pass
-
-        if app.model_nota_lc is None:
-            #app.model_nota_lc = import_model('nota_lc')
-            pass
-
-        if app.model_nota_mt is None:
-            #app.model_nota_mt = import_model('nota_mt')
-            pass
-
-        if app.model_nota_re is None:
-            #app.model_nota_re = import_model('nota_redacao')
-            pass
-
-        df =  pd.DataFrame([request.form.to_dict()])
-        #y_ch = app.model_nota_ch.predict(df)
-        #y_cn = app.model_nota_cn.predict(df)
-        #y_lc = app.model_nota_lc.predict(df)
-        #y_mt = app.model_nota_mt.predict(df)
-        #y_re = app.model_nota_re.predict(df)
-        y_ch = 458.3378
+        y_ch = round(model_nota_ch.predict(df)[0],2)
+        y_cn = round(model_nota_cn.predict(df)[0],2)
+        y_lc = round(model_nota_lc.predict(df)[0],2)
+        y_mt = round(model_nota_mt.predict(df)[0],2)
+        y_re = round(model_nota_re.predict(df)[0],2)
         response = f"""
         <div class="alert alert-success">
             <h4>Nota ENEM prevista</h4>
-            <p><strong>CH:</strong>{round(y_ch,2)}</p>
-            <p><strong>CN:</strong>{round(y_ch,2)}</p>
-            <p><strong>LC:</strong>{round(y_ch,2)} </p>
-            <p><strong>MT:</strong>{round(y_ch,2)} </p>
-            <p><strong>Redação:</strong>{round(y_ch,2)} </p>
+            <p><strong>Nota Ciências Humanas:</strong>{y_ch:.2f}</p>
+            <p><strong>Nota Ciências da Natureza:</strong>{y_cn:.2f}</p>
+            <p><strong>Nota Linguagens e Códigos:</strong>{y_lc:.2f} </p>
+            <p><strong>Nota Matemática:</strong>{y_mt:.2f} </p>
+            <p><strong>Nota Redação:</strong>{y_re:.2f} </p>
         </div>
         """
         return response
 
-def import_model(model_name):
-    with open(f'./models_pickle/model_XGBoost_{model_name}.pkl', 'rb') as f:
-        model = pickle.load(f)
-    return model
+
 def validate_form(form):
     list_errors = []
     form_keys = form.keys()
@@ -95,14 +95,17 @@ def validate_form(form):
         'Q022':22,
         'Q023':23,
         'Q024':24,
-        'Q025':25
+        'Q025':25,
+        'TP_ESCOLA':26,
+        'TP_ENSINO':27,
+        'TP_FAIXA_ETARIA':28
     }
 
     for key in dict_perguntas.keys():
         if not form_keys.__contains__(key):
             list_errors.append(f'<p><strong>Pergunta {dict_perguntas[key]} sem resposta</strong></p>')
 
-    if list_errors is not []:
+    if list_errors:
         response = f"""
                 <div class="alert alert-danger">
                     <h4>Erro no preenchimento do Form</h4>
@@ -112,6 +115,9 @@ def validate_form(form):
         return response
 
     return None
+
+
+threading.Thread(target=load_models).start()
 
 if __name__ == '__main__':
     app.run()
