@@ -127,7 +127,7 @@ def validate_form(form):
     return None
 
 
-threading.Thread(target=load_models).start()
-
+#threading.Thread(target=load_models).start()
+load_models()
 if __name__ == '__main__':
     app.run()
