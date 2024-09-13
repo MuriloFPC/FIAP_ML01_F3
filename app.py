@@ -1,5 +1,6 @@
+import sys
 import threading
-
+import logging
 from flask import Flask, render_template, request, send_file
 import pandas as pd
 import pickle
@@ -7,20 +8,29 @@ import pickle
 app = Flask(__name__)
 app.model_carregado = False
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', stream=sys.stdout)
+logger = logging.getLogger('FlaskApp')
+
 def import_model(model_name):
     with open(f'./models_pickle/model_XGBoost_{model_name}.pkl', 'rb') as f:
         model = pickle.load(f)
     return model
 
 def load_models():
-
+    logger.info('Loading models...')
     global model_nota_ch, model_nota_cn, model_nota_lc, model_nota_mt, model_nota_re
+    logger.info('Loading model nota_ch...')
     model_nota_ch = import_model('nota_ch')
+    logger.info('Loading model nota_cn...')
     model_nota_cn = import_model('nota_cn')
+    logger.info('Loading model nota_lc...')
     model_nota_lc = import_model('nota_lc')
+    logger.info('Loading model nota_mt...')
     model_nota_mt = import_model('nota_mt')
+    logger.info('Loading model nota_re...')
     model_nota_re = import_model('nota_redacao')
     setattr(app, 'model_carregado', True)
+    logger.info('Models loaded')
 @app.route('/', methods=['GET'])
 def hello_world():  # put application's code here
     return render_template('index.html')
