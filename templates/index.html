@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Trabalho FIAP</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/htmx.org@1.8.0"></script>
@@ -28,11 +28,11 @@
     <form hx-post="/predict" hx-target="#response" hx-swap="innerHTML show:top" class="col-12">
 
 
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P1 - Até que série seu pai, ou o homem responsável por você, estudou?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q001" id="Q001_1" value="1">
                   <label class="form-check-label" for="Q001_1">
@@ -83,11 +83,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P02 - Até que série sua mãe, ou a mulher responsável por você, estudou?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q002" id="Q002_1" value="1">
                   <label class="form-check-label" for="Q002_1">
@@ -138,11 +138,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P03 - A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação do seu pai ou do homem responsável por você. (Se ele não estiver trabalhando, escolha uma ocupação pensando no último trabalho dele).</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q003" id="Q003_1" value="1">
                   <label class="form-check-label" for="Q003_1">
@@ -181,11 +181,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P04 - A partir da apresentação de algumas ocupações divididas em grupos ordenados, indique o grupo que contempla a ocupação mais próxima da ocupação da sua mãe ou da mulher responsável por você. (Se ela não estiver trabalhando, escolha uma ocupação pensando no último trabalho dela).</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q004" id="Q004_1" value="1">
                   <label class="form-check-label" for="Q004_1">
@@ -224,11 +224,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P05 - Incluindo você, quantas pessoas moram atualmente em sua residência?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q005" id="Q005_1" value="1">
                   <label class="form-check-label" for="Q005_1">
@@ -353,11 +353,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P06 - Qual é a renda mensal de sua família? (Some a sua renda com a dos seus familiares.)</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q006" id="Q006_1" value="1">
                   <label class="form-check-label" for="Q006_1">
@@ -457,18 +457,18 @@
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="Q006" id="Q006_6" value="17">
+                  <input class="form-check-input" type="radio" name="Q006" id="Q006_17" value="17">
                   <label class="form-check-label" for="Q006_17">
                       Acima de R$ 26.400,00.
                   </label>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P07 - Em sua residência trabalha empregado(a) doméstico(a)?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q007" id="Q007_1" value="1">
                   <label class="form-check-label" for="Q007_1">
@@ -496,11 +496,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P08 - Na sua residência tem banheiro?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q008" id="Q008_1" value="1">
                   <label class="form-check-label" for="Q008_1">
@@ -534,11 +534,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P09 - Na sua residência tem quartos para dormir?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q009" id="Q009_1" value="1">
                   <label class="form-check-label" for="Q009_1">
@@ -573,11 +573,11 @@
             </div>
         </div>
         
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P10 - Na sua residência tem carro?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q010" id="Q010_1" value="1">
                   <label class="form-check-label" for="Q010_1">
@@ -611,11 +611,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P11 - Na sua residência tem motocicleta?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q011" id="Q011_1" value="1">
                   <label class="form-check-label" for="Q011_1">
@@ -649,11 +649,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P12 - Na sua residência tem geladeira?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q012" id="Q012_1" value="1">
                   <label class="form-check-label" for="Q012_1">
@@ -687,11 +687,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P13 - Na sua residência tem freezer (independente ou segunda porta da geladeira)?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q013" id="Q013_1" value="1">
                   <label class="form-check-label" for="Q013_1">
@@ -725,11 +725,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P14 - Na sua residência tem máquina de lavar roupa? (o tanquinho NÃO deve ser considerado)</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q014" id="Q014_1" value="1">
                   <label class="form-check-label" for="Q014_1">
@@ -763,11 +763,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P15 - Na sua residência tem máquina de secar roupa (independente ou em conjunto com a máquina de lavar roupa)?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q015" id="Q015_1" value="1">
                   <label class="form-check-label" for="Q015_1">
@@ -801,11 +801,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P16 - Na sua residência tem forno micro-ondas?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q016" id="Q016_1" value="1">
                   <label class="form-check-label" for="Q016_1">
@@ -839,11 +839,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P17 - Na sua residência tem máquina de lavar louça?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q017" id="Q017_1" value="1">
                   <label class="form-check-label" for="Q017_1">
@@ -877,11 +877,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P18 - Na sua residência tem aspirador de pó?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q018" id="Q018_1" value="1">
                   <label class="form-check-label" for="Q018_1">
@@ -897,11 +897,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P19 - Na sua residência tem televisão em cores?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q019" id="Q019_1" value="1">
                   <label class="form-check-label" for="Q019_1">
@@ -935,11 +935,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P20 - Na sua residência tem aparelho de DVD?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q020" id="Q020_1" value="1">
                   <label class="form-check-label" for="Q020_1">
@@ -955,11 +955,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P21 - Na sua residência tem TV por assinatura?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q021" id="Q021_1" value="1">
                   <label class="form-check-label" for="Q021_1">
@@ -975,11 +975,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P22 - Na sua residência tem telefone celular?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q022" id="Q022_1" value="1">
                   <label class="form-check-label" for="Q022_1">
@@ -1013,11 +1013,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P23 - Na sua residência tem telefone fixo?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q023" id="Q023_1" value="1">
                   <label class="form-check-label" for="Q023_1">
@@ -1033,11 +1033,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P24 - Na sua residência tem computador?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q024" id="Q024_1" value="1">
                   <label class="form-check-label" for="Q024_1">
@@ -1071,11 +1071,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P25 - Na sua residência tem acesso à Internet?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="Q025" id="Q025_1" value="1">
                   <label class="form-check-label" for="Q025_1">
@@ -1091,11 +1091,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P26 - Tipo de escola do Ensino Médio?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="TP_ESCOLA" id="TP_ESCOLA_1" value="1">
                   <label class="form-check-label" for="TP_ESCOLA_1">
@@ -1109,19 +1109,19 @@
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="TP_ESCOLA" id="TP_ESCOLA_2" value="3">
-                  <label class="form-check-label" for="TP_ESCOLA_2">
+                  <input class="form-check-input" type="radio" name="TP_ESCOLA" id="TP_ESCOLA_3" value="3">
+                  <label class="form-check-label" for="TP_ESCOLA_3">
                     Privada
                   </label>
                 </div>
             </div>
         </div>
         
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P27 - Tipo de instituição que concluiu ou concluirá o Ensino Médio ?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="TP_ENSINO" id="TP_ENSINO_1" value="1">
                   <label class="form-check-label" for="TP_ENSINO_1">
@@ -1136,11 +1136,11 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 border" style="text-align: center; align-content: center">
+        <div class="row row-cols-1 ">
+            <div class="col-lg-6 border" style="text-align: center; align-content: center">
                         <b>P28 - Faixa etária?</b>
             </div>
-            <div class="col-md-6 border">
+            <div class="col-lg-6 border">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="TP_FAIXA_ETARIA" id="TP_FAIXA_ETARIA_1" value="1">
                   <label class="form-check-label" for="TP_FAIXA_ETARIA_1">
