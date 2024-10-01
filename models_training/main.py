@@ -22,12 +22,9 @@ def train_model_RandomForestRegressor(X, Y, filename):
     model.fit(X_train, y_train)
     preds_valid = model.predict(X_test)
 
-    logger.info(f'Mean Absolute Error (MAE): {
-        metrics.mean_absolute_error(y_test, preds_valid)}')
-    logger.info(f'Mean Squared Error (MSE): {
-        metrics.mean_squared_error(y_test, preds_valid)}')
-    logger.info(f'Root Mean Squared Error (RMSE): {np.sqrt(
-        metrics.mean_squared_error(y_test, preds_valid))}')
+    logger.info(f'Mean Absolute Error (MAE): {metrics.mean_absolute_error(y_test, preds_valid)}')
+    logger.info(f'Mean Squared Error (MSE): {metrics.mean_squared_error(y_test, preds_valid)}')
+    logger.info(f'Root Mean Squared Error (RMSE): {np.sqrt(metrics.mean_squared_error(y_test, preds_valid))}')
     mape = metrics.mean_absolute_percentage_error(y_test, preds_valid)
     logger.info(f'Mean Absolute Percentage Error (MAPE):{mape}')
     logger.info(f'Accuracy: {1 - mape}')
@@ -71,12 +68,9 @@ def train_model_XGBoost(X, Y, filename):
 
     # log first five test values
     logger.info(f'Real: {y_test[:5]}')
-    logger.info(f'Mean Absolute Error (MAE): {
-        metrics.mean_absolute_error(y_test, preds_valid)}')
-    logger.info(f'Mean Squared Error (MSE): {
-        metrics.mean_squared_error(y_test, preds_valid)}')
-    logger.info(f'Root Mean Squared Error (RMSE): {np.sqrt(
-        metrics.mean_squared_error(y_test, preds_valid))}')
+    logger.info(f'Mean Absolute Error (MAE): {metrics.mean_absolute_error(y_test, preds_valid)}')
+    logger.info(f'Mean Squared Error (MSE): {metrics.mean_squared_error(y_test, preds_valid)}')
+    logger.info(f'Root Mean Squared Error (RMSE): {np.sqrt(metrics.mean_squared_error(y_test, preds_valid))}')
     mape = metrics.mean_absolute_percentage_error(y_test, preds_valid)
     logger.info(f'Mean Absolute Percentage Error (MAPE):{mape}')
     logger.info(f'Accuracy: {1 - mape}')
